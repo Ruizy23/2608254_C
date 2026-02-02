@@ -1,0 +1,38 @@
+﻿week,actual_survived,sim_rank_survived,sim_percent_survived,celebrity_name,season
+1,1,1,1,Jerry Rice,2
+2,1,1,1,Jerry Rice,2
+3,1,1,1,Jerry Rice,2
+4,1,1,1,Jerry Rice,2
+5,1,1,1,Jerry Rice,2
+6,1,1,1,Jerry Rice,2
+7,1,1,1,Jerry Rice,2
+8,1,1,1,Jerry Rice,2
+1,1,1,1,Billy Ray Cyrus,4
+2,1,0,0,Billy Ray Cyrus,4
+3,1,0,0,Billy Ray Cyrus,4
+4,1,0,0,Billy Ray Cyrus,4
+5,1,0,0,Billy Ray Cyrus,4
+6,1,0,0,Billy Ray Cyrus,4
+7,1,0,0,Billy Ray Cyrus,4
+8,1,0,0,Billy Ray Cyrus,4
+9,0,0,0,Billy Ray Cyrus,4
+10,0,0,0,Billy Ray Cyrus,4
+1,1,1,1,Bristol Palin,11
+2,1,1,1,Bristol Palin,11
+3,1,1,1,Bristol Palin,11
+4,1,1,1,Bristol Palin,11
+5,1,1,1,Bristol Palin,11
+6,1,1,1,Bristol Palin,11
+7,1,1,1,Bristol Palin,11
+8,1,0,1,Bristol Palin,11
+9,1,0,1,Bristol Palin,11
+10,1,0,1,Bristol Palin,11
+1,1,1,1,Bobby Bones,27
+2,1,1,1,Bobby Bones,27
+3,1,1,1,Bobby Bones,27
+4,1,1,1,Bobby Bones,27
+5,1,1,1,Bobby Bones,27
+6,1,1,1,Bobby Bones,27
+7,1,1,1,Bobby Bones,27
+8,1,1,1,Bobby Bones,27
+9,1,1,1,Bobby Bones,27
