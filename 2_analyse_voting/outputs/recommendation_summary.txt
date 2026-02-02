@@ -1,0 +1,16 @@
+Problem 2 — Summary for recommendations
+==================================================
+
+Fan vs judge influence (Percentage mode):
+  Average sigma_F / sigma_J = 3.3946
+  (>1: fan variance dominates; higher = more fan-biased.)
+
+Judges' Save impact (single-week):
+  Total bottom-two weeks considered: 229
+  Times eliminated contestant had higher judge score (would have been saved): 95
+  Rate: 41.48%
+
+Flip rate (Rank vs Percent): see flip_rate_by_season.csv.
+Controversy timelines: see controversy_survival_timeline.csv.
+Save season-level impact (under imputation): see save_season_impact_imputed.csv.
+Fan vote uncertainty propagation: see robustness_flip_rate_by_season.csv, robustness_save_summary.txt.

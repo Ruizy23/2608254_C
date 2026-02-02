@@ -1,0 +1,25 @@
+Problem 2 — Methodology note
+==================================================
+
+1. Counterfactual (rule switch): Conducted under the controlled assumption that
+   'underlying fan preferences do not change with the scoring rule.' Same estimated
+   fan votes F (from Q1) are used; only the combination rule (Rank / Percent) is switched.
+   Robustness: conclusions can be checked by sampling F from [lb, ub] and re-running.
+
+2. Judges' Save impact: Bottom Two each week is determined by the actual rule for that
+   season: Rank-based (S1-2, S28-34) vs Percentage-based (S3-27). Then who would be saved
+   is decided by higher judge score. See save_impact_detail.csv column 'voting_method'.
+   Baseline: deterministic (higher J saved). Optional: logit P(save i)=sigmoid(beta*(Ji-Jj));
+   sensitivity on beta can be run for MCM-style robustness (code: p_judges_save_a_logit).
+   This is a single-week static statistic (would this person have been saved this week?).
+   Season-level impact: We also run a full-season replay WITH Save under 'last-observed
+   imputation' (saved contestant keeps their last week J/F in subsequent weeks). See
+   save_season_impact_imputed.csv for champion_changed and finalists_top3_changed.
+
+3. simulate_season_with_method: Uses alive ∩ get_contestants_still_in(season, week, df_wide),
+   i.e. within-observed-weeks counterfactual. A person historically eliminated in week 5
+   does not appear in week 6+ (no J/F for them). Not a full season replay.
+
+4. Q1 fan vote uncertainty: We propagate F uncertainty by sampling from [lb, ub] (B runs)
+   and re-running flip/save; see robustness_flip_rate_by_season.csv and
+   robustness_save_summary.txt. Conclusions are stable if std is small.

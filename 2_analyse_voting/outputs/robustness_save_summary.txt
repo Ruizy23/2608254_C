@@ -1,0 +1,3 @@
+Q1 fan vote uncertainty propagation (B=30 samples from [lb,ub])
+Would-have-been-saved count: mean = 55.70, std = 3.98
+Flip rate per season: see robustness_flip_rate_by_season.csv (mean +/- std).
