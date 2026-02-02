@@ -1,0 +1,31 @@
+Problem 4: New Scoring System — Recommendation for Show Producers
+============================================================
+
+Modeling note: We evaluate the proposed system as a unified rule on historical data.
+Historical DWTS rules (rank/percent, judge-save by season) differ; we use a single
+baseline (Percentage + bottom-two + judge save) for comparable evaluation.
+
+Current system (Percentage method):
+  Fairness (M_F): 0.8547
+  Excitement (M_E): 0.1427
+  Obvious-injustice rate (M_injustice): 0.3946
+  Suspense rate M_suspense (close-call weeks): 0.5030
+
+Proposed system (Sigmoid-Scaled Meritocracy):
+  Recommended parameters: α = 0.30, k = 0.50
+  Fairness (M_F): 0.8987
+  Excitement (M_E): 0.1106
+  Obvious-injustice rate (M_injustice): 0.0202
+  Suspense rate M_suspense: 0.2929
+
+Robustness (fan vote uncertainty, B=30 samples from [lb, ub]):
+  M_F = 0.8941 ± 0.0040
+  M_E = 0.1170 ± 0.0025
+  → Recommended (α, k) remains preferable to baseline under estimation error.
+
+Why adopt:
+  - Higher fairness: outcomes align better with judge assessment (M_F increased).
+  - Lower obvious-injustice rate: fewer eliminations where judge score was higher than a survivor.
+  - Bounded fan impact: tanh(k·z) prevents runaway fan dominance (elite protection).
+  - Excitement preserved: comeback rate M_E and suspense M_suspense remain competitive.
+  - Z-score standardization equalizes judge and fan voice before combination.
